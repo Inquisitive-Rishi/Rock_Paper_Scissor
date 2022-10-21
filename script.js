@@ -49,11 +49,17 @@ function game() {
     }
   }
   if (playerScore > computerScore) {
-    alert("Congrats! You beat the computer. ");
+    alert(
+      `Congrats! You beat the computer. \n you- ${playerScore}  AI- ${computerScore}`
+    );
   } else if (playerScore < computerScore) {
-    alert("Computer destroyed you!!");
+    alert(
+      `Computer destroyed you!! \n you- ${playerScore}  AI- ${computerScore}`
+    );
   } else {
-    alert("No winner, it was a tie!");
+    alert(
+      `No winner, it was a tie!  \n you- ${playerScore}  AI- ${computerScore}`
+    );
   }
   console.log(playerScore, computerScore);
 }
