@@ -48,6 +48,7 @@ function game() {
       computerScore;
     }
   }
+
   if (playerScore > computerScore) {
     alert(
       `Congrats! You beat the computer. \n you- ${playerScore}  AI- ${computerScore}`
