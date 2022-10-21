@@ -1,4 +1,4 @@
-//random choise of computer
+//random choice of computer
 const choices = ["rock", "paper", "scissor"];
 
 const getComputerChoice = function (arr) {
@@ -25,8 +25,19 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-const playerSelection = prompt(
-  "Enter your choice: rock, paper, scissor?"
-).toLowerCase();
-const computerSelection = getComputerChoice(choices);
-console.log(playRound(playerSelection, computerSelection));
+// repeat this process 5 times
+
+function game() {
+  for (let i = 0; i < 5; i++) {
+    const playerSelection = prompt(
+      "Enter your choice: rock, paper, scissor?"
+    ).toLowerCase();
+    const computerSelection = getComputerChoice(choices);
+    console.log(playRound(playerSelection, computerSelection));
+  }
+}
+game();
+// declare the winner
+// score >=3 is the winner.
+
+// declare the winner wtth alert.
