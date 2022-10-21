@@ -48,6 +48,13 @@ function game() {
       computerScore;
     }
   }
+  if (playerScore > computerScore) {
+    alert("Congrats! You beat the computer. ");
+  } else if (playerScore < computerScore) {
+    alert("Computer destroyed you!!");
+  } else {
+    alert("No winner, it was a tie!");
+  }
   console.log(playerScore, computerScore);
 }
 
