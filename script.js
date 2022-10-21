@@ -26,17 +26,31 @@ function playRound(playerSelection, computerSelection) {
 }
 
 // repeat this process 5 times
-
+game();
 function game() {
+  let playerScore = 0;
+  let computerScore = 0;
+
   for (let i = 0; i < 5; i++) {
     const playerSelection = prompt(
       "Enter your choice: rock, paper, scissor?"
     ).toLowerCase();
     const computerSelection = getComputerChoice(choices);
-    console.log(playRound(playerSelection, computerSelection));
+    let message = playRound(playerSelection, computerSelection);
+    console.log(message);
+
+    if (message.includes("win")) {
+      playerScore++;
+    } else if (message.includes("loose")) {
+      computerScore++;
+    } else if (message.includes("tie")) {
+      playerScore;
+      computerScore;
+    }
   }
+  console.log(playerScore, computerScore);
 }
-game();
+
 // declare the winner
 // score >=3 is the winner.
 
